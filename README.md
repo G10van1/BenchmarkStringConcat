@@ -1,8 +1,8 @@
-# BenchmarkCollections
+# BenchmarkStringConcat
 
 Compares the time spent concatenating strings in different ways.
 
-Measure time and performance to cancates strings using different ways as:
+Measure time and performance to cancatenate strings using different ways like:
  - StringBuilder;
  - StringPlus;
  - StringFormat;
