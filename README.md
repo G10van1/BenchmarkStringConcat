@@ -1,16 +1,16 @@
 # BenchmarkCollections
 
-Comparing the time spent creating, searching, removing and inserting numbers in collections.
+Compares the time spent concatenating strings in different ways.
 
-Measure time and performance using different collections as:
- - ArrayList;
- - List;
- - LinkedList;
- - Dictionary;
- - SortedList;
- - SortedDictionary.
+Measure time and performance to cancates strings using different ways as:
+ - StringBuilder;
+ - StringPlus;
+ - StringFormat;
+ - StringConcat;
+ - StringJoin;
+ - StringInterpolation.
 
-Easy to include other collection classes as it uses the Strategy design pattern.
+Easy to include other ways as it uses the Strategy design pattern.
 
 ## Tools
 Visual Studio 2022
