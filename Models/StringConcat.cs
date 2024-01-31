@@ -25,11 +25,13 @@ namespace BenchmarkStringConcat.Models
                    , ' '
                    , name[2]
                    , '\n');
-            result = String.Concat(result
-                            , stopwatch.ElapsedMilliseconds.ToString().PadLeft(11, ' ')
-                            , " ms\n");
+
             stopwatch.Stop();
-            return (stopwatch.ElapsedMilliseconds, result);
+            long nanoseconds = (long)Math.Round(((double)stopwatch.ElapsedTicks / Stopwatch.Frequency) * 1e9);
+            result = String.Concat(result
+                            , nanoseconds.ToString().PadLeft(32, ' ')
+                            , " ns\n");
+            return (nanoseconds, result);
         }
     }
 }

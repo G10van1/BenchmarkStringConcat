@@ -12,9 +12,10 @@ namespace BenchmarkStringConcat.Models
             result = $"{this.GetType().ToString().Split('.')[2]}\n ";
             for (int i = 0; i < size; i++)
                 str = $"{str}{i} {name[0]} {name[1]} {name[2]}\n";
-            result = $"{result}{stopwatch.ElapsedMilliseconds.ToString().PadLeft(11, ' ')} ms\n";
             stopwatch.Stop();
-            return (stopwatch.ElapsedMilliseconds, result);
+            long nanoseconds = (long)Math.Round(((double)stopwatch.ElapsedTicks / Stopwatch.Frequency) * 1e9);
+            result = $"{result}{nanoseconds.ToString().PadLeft(32, ' ')} ns\n";
+            return (nanoseconds, result);
         }
     }
 }

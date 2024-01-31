@@ -21,6 +21,7 @@ namespace BenchmarkStringConcat
                 new StringConcat(),
                 new StringFormat(),
                 new StringBuilder(),
+                new StringList()
             };
 
             // Create array tasks

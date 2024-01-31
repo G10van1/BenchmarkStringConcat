@@ -15,10 +15,11 @@ namespace BenchmarkStringConcat.Models
             string str = "";
             result = String.Format("{0}\n", this.GetType().ToString().Split('.')[2]);
             for (int i = 0; i < size; i++)
-                str = String.Format("{0} {1} {2} {3} {4}\n", str, i, name[0], name[1], name[2]);
-            result = String.Format("{0} {1} ms\n", result, stopwatch.ElapsedMilliseconds.ToString().PadLeft(11, ' '));
+                str = String.Format("{0}{1} {2} {3} {4}\n", str, i, name[0], name[1], name[2]);
             stopwatch.Stop();
-            return (stopwatch.ElapsedMilliseconds, result);
+            long nanoseconds = (long)Math.Round(((double)stopwatch.ElapsedTicks / Stopwatch.Frequency) * 1e9);
+            result = String.Format("{0} {1} ns\n", result, nanoseconds.ToString().PadLeft(32, ' '));
+            return (nanoseconds, result);
         }
     }
 }

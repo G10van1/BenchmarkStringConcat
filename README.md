@@ -8,7 +8,8 @@ Measure time and performance to cancatenate strings using different ways like:
  - StringFormat;
  - StringConcat;
  - StringJoin;
- - StringInterpolation.
+ - StringInterpolation;
+ - StringList.
 
 Easy to include other ways as it uses the Strategy design pattern.
 

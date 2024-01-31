@@ -22,10 +22,11 @@ namespace BenchmarkStringConcat.Models
                    .Append(' ')
                    .AppendLine(names[2]);
             }
-            result.Append(stopwatch.ElapsedMilliseconds.ToString().PadLeft(11, ' '))
-                  .AppendLine(" ms");
             stopwatch.Stop();
-            return (stopwatch.ElapsedMilliseconds, result.ToString());
+            long nanoseconds = (long)Math.Round(((double)stopwatch.ElapsedTicks / Stopwatch.Frequency) * 1e9);
+            result.Append(nanoseconds.ToString().PadLeft(32, ' '))
+                  .AppendLine(" ns");
+            return (nanoseconds, result.ToString());
         }
     }
 }
