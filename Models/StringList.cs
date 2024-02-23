@@ -6,10 +6,9 @@ namespace BenchmarkStringConcat.Models
     {
         public (long, string) Concat(int size, string[] name)
         {
-            Stopwatch stopwatch = Stopwatch.StartNew();
-            List<String> list = new List<String>();
+            Stopwatch stopwatch = Stopwatch.StartNew();            
             string result = this.GetType().ToString().Split('.')[2] + "\n ";
-            string str = " ";
+            List<String> list = new List<String>();
             for (int i = 0; i < size; i++) {
                 list.Add(i.ToString());
                 list.Add(name[0]);
@@ -17,7 +16,7 @@ namespace BenchmarkStringConcat.Models
                 list.Add(name[2]);
                 list.Add("\n");
             }
-            str += string.Join(' ', list);
+            string str = string.Join(' ', list);
             stopwatch.Stop();
             long nanoseconds = (long)Math.Round(((double)stopwatch.ElapsedTicks / Stopwatch.Frequency) * 1e9);
             result += nanoseconds.ToString().PadLeft(32, ' ') +" ns\n";

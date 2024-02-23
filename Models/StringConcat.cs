@@ -12,9 +12,8 @@ namespace BenchmarkStringConcat.Models
         public (long, string) Concat(int size, string[] name)
         {
             Stopwatch stopwatch = Stopwatch.StartNew();
-            string result = "";
+            string result = String.Concat(this.GetType().ToString().Split('.')[2], "\n ");
             string str = "";
-            result = String.Concat(this.GetType().ToString().Split('.')[2], "\n ");
             for (int i = 0; i < size; i++)
                 str = String.Concat(str
                    , i.ToString()

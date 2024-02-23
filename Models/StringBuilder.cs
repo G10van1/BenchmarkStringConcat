@@ -10,8 +10,8 @@ namespace BenchmarkStringConcat.Models
         {
             Stopwatch stopwatch = Stopwatch.StartNew();
             System.Text.StringBuilder result = new System.Text.StringBuilder();
-            System.Text.StringBuilder str = new System.Text.StringBuilder();
             result.Append(this.GetType().ToString().Split('.')[2]).Append("\n ");
+            System.Text.StringBuilder str = new System.Text.StringBuilder();
             for (int i = 0; i < size; i++)
             {
                 str.Append(i.ToString())

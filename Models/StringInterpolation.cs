@@ -7,9 +7,8 @@ namespace BenchmarkStringConcat.Models
         public (long, string) Concat(int size, string[] name)
         {
             Stopwatch stopwatch = Stopwatch.StartNew();
-            string result = "";
+            string result = $"{this.GetType().ToString().Split('.')[2]}\n ";
             string str = "";
-            result = $"{this.GetType().ToString().Split('.')[2]}\n ";
             for (int i = 0; i < size; i++)
                 str = $"{str}{i} {name[0]} {name[1]} {name[2]}\n";
             stopwatch.Stop();

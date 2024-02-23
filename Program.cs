@@ -8,7 +8,7 @@ namespace BenchmarkStringConcat
         {
             Console.WriteLine("Comparing time spent concating strings in different ways.\n");
 
-            const int SIZE = 10000;
+            const int SIZE = 10;
             string[] names = { "First", "Middle", "Last" };
 
             Console.WriteLine($"Concating {SIZE} names\n");
