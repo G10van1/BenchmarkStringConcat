@@ -3,13 +3,13 @@
 Compares the time spent concatenating strings in different ways.
 
 Measure time and performance to cancatenate strings using different ways like:
- - StringBuilder;
- - StringPlus;
- - StringFormat;
- - StringConcat;
- - StringJoin;
- - StringInterpolation;
- - StringList.
+ - String Builder;
+ - String Plus;
+ - String Format;
+ - String Concat;
+ - String Join;
+ - String Interpolation;
+ - String List.
 
 Easy to include other ways as it uses the Strategy design pattern.
 
